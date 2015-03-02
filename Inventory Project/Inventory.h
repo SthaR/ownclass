@@ -20,11 +20,15 @@ class Inventory{
 			void purchase(int );		
 			void lost(int );			
 			void damaged(int );	
-			void displayStockMessage();						
+			void displayStockMessage();
+			bool isStockEmpty();	
+			~Inventory();
 			
 		private:
 			string itemName;
 			string itemCategory;
 			int stock;
+			void deduct(int);
+			void increment(int);
 			
 };
