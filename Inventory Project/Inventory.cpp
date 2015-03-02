@@ -58,3 +58,18 @@ void Inventory::displayStockMessage(){
 				cout << "The current stock of " << getItemName() << " belonging to category " << getItemCategory() << " is: " << getItemStock();
 }
 			
+bool Inventory::isStockEmpty(){
+	return (getItemStock()==0?true:false);
+}
+
+void Inventory::deduct(int quantity){
+	setItemStock(getItemStock()-quantity);
+}
+
+void Inventory::increment(int quantity){
+	setItemStock(getItemStock()+quantity);
+}
+
+Inventory::~Inventory(){
+	cout << "\nDestroyed!!!";
+}
